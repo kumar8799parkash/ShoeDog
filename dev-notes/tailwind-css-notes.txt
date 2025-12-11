@@ -1,0 +1,35 @@
+h-full and w-full
+h-full means height is 100% of the container (tailwind's h-full === normal css's 100%)
+h-1/2 means height is half of the container's height(if container height=500px this means h-1/2 means height of current box is:250px)
+For h-full to work:
+👉 The parent must have a defined height
+Otherwise, “100% of nothing = nothing”, and the element collapses.
+
+
+h-screen = height: 100vh
+w-screen = width: 100vw   (used in You’re building full-page layouts, Hero sections etc.)
+Which means:
+✔ vh and vw are based on the viewport
+100vh = full browser window height
+100vw = full browser window width
+
+| Utility / Unit            | Depends on Parent? | Depends on Viewport? | Example Meaning                               |
+| ------------------------- | ------------------ | -------------------- | --------------------------------------------- |
+| `h-full` / `w-full`       | ✅ Yes              | ❌ No                 | “Take 100% of whatever size your parent has.” |
+| `h-screen` / `w-screen`   | ❌ No               | ✅ Yes                | “Take full screen height or width.”           |
+| `h-[100vh]` / `w-[100vw]` | ❌ No               | ✅ Yes                | Exact viewport height/width                   |
+
+
+Many HTML elements come with default margin, padding, and sometimes borders.
+
+difference between index.css and App.css:
+| File          | Imported In | Scope            | Purpose                                 |
+| ------------- | ----------- | ---------------- | --------------------------------------- |
+| **index.css** | main.jsx    | Entire App       | Global resets + fonts + Tailwind layers |
+| **App.css**   | App.jsx     | Single component | Component styling (non-global)          |
+
+Do we even need App.css?
+If you're using Tailwind, often the answer is:
+👉 No. You may not need App.css at all.
+
+
