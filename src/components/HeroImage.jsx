@@ -6,8 +6,7 @@ import './HeroImage.css'
 const HeroImage = () => {
   return (
     <div>
-      <div className="hero-image-cont h-screen w-screen">
-        <img className='h-full w-full' src={HeroImage1} alt="Hero Image1" />
+      <div className="hero-image-cont h-screen w-full">
       </div>
     </div>
   )
