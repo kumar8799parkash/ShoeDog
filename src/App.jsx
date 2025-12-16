@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './components/Navbar'
 import HeroImage from './components/HeroImage'
+import SectionContainer from './components/SectionContainer'
 
 
 function App() {

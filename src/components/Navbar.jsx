@@ -9,7 +9,7 @@ import './Navbar.css'
 const Navbar = () => {
   return (
     <div>
-      <div className="main-navbar-cont w-screen h-12 bg-green-900 flex px-20 justify-between">
+      <div className="main-navbar-cont w-full h-12 bg-green-900 flex px-20 justify-between">
 
         <div className="left-nav-cont h-full flex">
           <div className="brand-logo-cont h-full flex justify-center items-center mr-3 p-2 shrink-0"> <img className='h-full cursor-pointer' src={logo} alt="Brand Logo" /> </div>
