@@ -6,7 +6,7 @@ import './HeroImage.css'
 const HeroImage = () => {
   return (
     <div>
-      <div className="hero-image-cont h-[88vh] w-full box-border">
+      <div className="hero-image-cont h-[88vh] w-full box-border mb-10">
         <img src={HeroImage1} className='h-full w-full object-cover' alt="Hero Image-1" />
       </div>
     </div>
