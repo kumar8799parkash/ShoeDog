@@ -2,7 +2,7 @@ import React from 'react'
 import logo from '../assets/logo.png'
 import searchLogo from '../assets/svgs/search.svg'
 import userProfileLogo from '../assets/svgs/user-profile.svg'
-import cartLogo from '../assets/svgs/cart.svg'
+import bagLogo from '../assets/svgs/bag.svg'
 import './Navbar.css'
 
 
@@ -42,7 +42,7 @@ const Navbar = () => {
 
 
           <div className="user-profile-cont h-full p-2.5 mr-2 cursor-pointer"> <img className='h-full invert-100' src={userProfileLogo} alt="" /> </div>
-          <div className="cart-cont h-full p-1.5 cursor-pointer"> <img className='h-full invert-100' src={cartLogo} alt="" /> </div>
+          <div className="cart-cont h-full p-1.5 cursor-pointer"> <img className='h-full invert-100' src={bagLogo} alt="" /> </div>
         </div>
       </div>
     </div>
