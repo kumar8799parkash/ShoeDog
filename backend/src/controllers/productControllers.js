@@ -1,5 +1,6 @@
 import Product from "../models/productModel.js";
 import Category from "../models/CategoryModel.js";
+import mongoose from "mongoose";
 
 export const getAllProducts = async(req , res)=>{
     try{
@@ -11,6 +12,26 @@ export const getAllProducts = async(req , res)=>{
     }
     catch(err){
         res.status(500).json({message : "There is some internal error while fetching products from Product model"});
+    }
+}
+
+export const getProductsById = async(req , res)=>{
+    try{
+        const productId = req.params.id;
+
+        if(!mongoose.Types.ObjectId.isValid(productId)){
+            return res.status(400).json({message : "Invalid product ID"});
+        }
+
+        const product = await Product.findById(productId);
+        if(!product){
+            return res.status(404).json({message : "Product not found!"});
+        }
+        res.status(200).json(product);
+        
+    }
+    catch(err){
+        res.status(500).json({message : "Internal server error while fetching product of given ObjectId"});
     }
 }
 
