@@ -5,7 +5,7 @@ const categorySchema = new mongoose.Schema({
     slug : {type : String , required : true , unique : true},
     imageURL : {type : String , required : true},
     description : {type : String},
-    products : {type : mongoose.Schema.Types.ObjectId , ref : 'Product'}
+    products : [{type : mongoose.Schema.Types.ObjectId , ref : 'Product'}]
 } , {timestamps : true})
 
 const Category = mongoose.model('Category' , categorySchema);
