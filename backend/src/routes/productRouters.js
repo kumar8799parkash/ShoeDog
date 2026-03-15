@@ -10,5 +10,6 @@ productRouter.get('/men' , getMenProducts);
 productRouter.get('/exclusive' , getExclusiveProducts);
 productRouter.get('/sale' , getSaleProducts);
 productRouter.get('/woods' , getWoodsProducts);
+productRouter.get('/women' , getWomenProducts);
 
 export {productRouter};

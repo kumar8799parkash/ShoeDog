@@ -2,6 +2,7 @@ import express from 'express'
 import dotenv from 'dotenv'
 import { connectDB } from './src/config/db.js';
 import { productRouter } from './src/routes/productRouters.js';
+import cors from 'cors'
 
 
 /* import Category from './src/models/CategoryModel.js';
@@ -12,7 +13,9 @@ dotenv.config();
 connectDB();
 const PORT = process.env.PORT;
 
+
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
