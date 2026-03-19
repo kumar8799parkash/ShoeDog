@@ -19,6 +19,7 @@
     font-weight: 500;
 }
 
+
 @media (max-width : 1100px) {
     .main-navbar-cont{
         padding: 0px 20px;
@@ -48,3 +49,4 @@
     }
 
 }
+

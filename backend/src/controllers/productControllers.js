@@ -35,6 +35,11 @@ export const getProductsById = async(req , res)=>{
     }
 }
 
+
+
+
+
+
 export const getMenProducts = async(req , res)=>{
     try{
         const category = await Category.findOne({title : "Men"}).populate("products");
@@ -46,6 +51,23 @@ export const getMenProducts = async(req , res)=>{
         res.status(500).json({message : "There is some internal error while fetching men products from Category model"});
     }
 }
+
+export const getMenPage = async(req , res)=>{
+    try{
+        const category = await Category.findOne({title : "Men"}).populate("products");
+        if(!category){
+            return res.status(400).json({message : "men category not found"});
+        }
+        res.status(200).json(category);
+    }catch(err){
+        res.status(500).json({message : "There is some internal error while fetching men products from Category model"});
+    }
+}
+
+
+
+
+
 
 export const getWomenProducts = async(req , res)=>{
     try{

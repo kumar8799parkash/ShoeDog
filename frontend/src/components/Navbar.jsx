@@ -11,11 +11,11 @@ import { useNavigate } from 'react-router-dom'
 const Navbar = () => {
   const navigate = useNavigate();
 
-  function handleBagClick(){
+  function handleBagClick() {
     navigate("/cart");
   }
 
-  function handleProfileClick(){
+  function handleProfileClick() {
     navigate("/profile");
   }
 
@@ -24,7 +24,10 @@ const Navbar = () => {
       <div className="main-navbar-cont w-full h-12 bg-green-900 flex px-20 justify-between">
 
         <div className="left-nav-cont h-full flex">
-          <div className="brand-logo-cont h-full flex justify-center items-center mr-3 p-2 shrink-0"> <img className='h-full cursor-pointer' src={logo} alt="Brand Logo" /> </div>
+          <div className="brand-logo-cont h-full flex justify-center items-center mr-3 p-2 shrink-0">
+            <Link to='/' className='h-full'> <img className='h-full cursor-pointer' src={logo} alt="Brand Logo" /> </Link>  
+          </div>
+          {/* Link is inline element, so its default height is content height(or auto) but here we set its height to h-full(which makes its height parent height ie h-12 ie fixed height) so inside img tag, h-full will work fine, if we do not set the height of the Link tag then Link's height is auto and for img, h-full means '100% of auto' which is undefined */}
 
           <div className="left-nav-item-cont">
             <Link to='/' className="left-nav-item left-nav-item1 cursor-pointer">Home</Link>

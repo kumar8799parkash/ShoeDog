@@ -1,12 +1,22 @@
-import React from 'react'
+import React,{useState , useEffect} from 'react'
 import Navbar from '../components/Navbar.jsx'
-import SectionContainer from '../components/SectionContainer.jsx'
+import PageImage from '../components/pageImage.jsx'
+
+import BottomNavigation from '../components/BottomNavigation.jsx'
+import productGrid from '../components/productGrid.jsx'
+
+import configObject from '../config.js'
+
 
 const men = () => {
+
   return (
-    <div>
-      this is men page
-    </div>
+    <>
+      <Navbar/>
+      <PageImage category='men'/>
+      <productGrid category='men'/>
+      <BottomNavigation/>
+    </>
   )
 }
 
