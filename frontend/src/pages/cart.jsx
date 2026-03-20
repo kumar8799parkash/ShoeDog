@@ -1,8 +1,13 @@
 import React from "react";
+import Navbar from '../components/Navbar.jsx'
+import BottomNavigation from '../components/BottomNavigation.jsx'
 
 const Cart = () => {
 
   return (
+    <>
+    <Navbar/>
+    <BottomNavigation/>
     <div className="min-h-screen bg-gray-100 py-10">
 
       {/* Heading */}
@@ -158,6 +163,7 @@ const Cart = () => {
       </div>
 
     </div>
+    </>
   );
 };
 

@@ -1,10 +1,20 @@
-import React from 'react'
+import React,{useState , useEffect} from 'react'
+import Navbar from '../components/Navbar.jsx'
+import PageImage from '../components/pageImage.jsx'
+
+import BottomNavigation from '../components/BottomNavigation.jsx'
+import ProductGrid from '../components/ProductGrid.jsx'
+
 
 const sale = () => {
+
   return (
-    <div>
-      this is sale page
-    </div>
+    <>
+      <Navbar/>
+      <PageImage category='sale'/>
+      <BottomNavigation/>
+      <ProductGrid category='sale'/>
+    </>
   )
 }
 

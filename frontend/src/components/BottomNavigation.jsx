@@ -10,11 +10,11 @@ import userProfileSvg from '../assets/svgs/user-profile.svg'
 const BottomNavigation = () => {
 
     const [bottomNavLinks, setBottomNavLinks] = useState([
-        { src: homeSvg, text: "Home" , link : "home" },
-        { src: menSvg, text: "Men" , link : "men" },
-        { src: womenSvg, text: "Women" , link : "women" },
-        { src: cartSvg, text: "Cart" , link : "cart" },
-        { src: userProfileSvg, text: "Profile" , link : "profile" }
+        { src: homeSvg, text: "Home" , link : "/" },
+        { src: menSvg, text: "Men" , link : "/men" },
+        { src: womenSvg, text: "Women" , link : "/women" },
+        { src: cartSvg, text: "Cart" , link : "/cart" },
+        { src: userProfileSvg, text: "Profile" , link : "/profile" }
     ]);
 
     return (

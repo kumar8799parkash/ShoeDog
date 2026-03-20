@@ -16,7 +16,7 @@ const product = () => {
                 if (!data) {
                     console.log("data is not present");
                 }
-                console.log(data);
+                //console.log(data);
                 setProductDeatils(data);
             } catch (err) {
                 console.log(`Error while fetching in getProductsById ${err}`);

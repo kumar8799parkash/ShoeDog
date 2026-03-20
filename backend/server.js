@@ -2,6 +2,7 @@ import express from 'express'
 import dotenv from 'dotenv'
 import { connectDB } from './src/config/db.js';
 import { productRouter } from './src/routes/productRouters.js';
+import {categoryRouter} from './src/routes/categoryRouter.js';
 import cors from 'cors'
 
 
@@ -24,6 +25,7 @@ app.get('/', (req, res) => {
 
 
 app.use('/product' , productRouter);
+app.use('/category' , categoryRouter);
 
 app.listen(PORT, () => {
     console.log(`app is listening on ${PORT}`);

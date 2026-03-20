@@ -5,8 +5,8 @@ import cartLogo from '../assets/svgs/cart.svg'
 
 const ProductCard = ({productId , category , images , title , price}) => {
     const navigate = useNavigate();
-    const handleProductOpen = (objectId)=>{
-        navigate(`product/${objectId}`);
+    function handleProductOpen(objectId){
+        navigate(`/product/${objectId}`);       // /product/${objectId} = ABSOLUTE PATH(ALWAYS WORKS) , product/${objectId}=RELATIVE PATH(NOT GOOD PRACTICE)
     }
     return (
         <div onClick={() => { handleProductOpen(productId) }} className="section-content-item h-full w-[19.5%] border-gray-200 overflow-hidden cursor-pointer">

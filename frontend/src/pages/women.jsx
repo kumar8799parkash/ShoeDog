@@ -1,10 +1,20 @@
-import React from 'react'
+import React,{useState , useEffect} from 'react'
+import Navbar from '../components/Navbar.jsx'
+import PageImage from '../components/pageImage.jsx'
+
+import BottomNavigation from '../components/BottomNavigation.jsx'
+import ProductGrid from '../components/ProductGrid.jsx'
+
 
 const women = () => {
+
   return (
-    <div>
-      this is women page
-    </div>
+    <>
+      <Navbar/>
+      <PageImage category='women'/>
+      <BottomNavigation/>
+      <ProductGrid category='women'/>
+    </>
   )
 }
 

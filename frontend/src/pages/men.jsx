@@ -3,9 +3,7 @@ import Navbar from '../components/Navbar.jsx'
 import PageImage from '../components/pageImage.jsx'
 
 import BottomNavigation from '../components/BottomNavigation.jsx'
-import productGrid from '../components/productGrid.jsx'
-
-import configObject from '../config.js'
+import ProductGrid from '../components/ProductGrid.jsx'
 
 
 const men = () => {
@@ -14,8 +12,8 @@ const men = () => {
     <>
       <Navbar/>
       <PageImage category='men'/>
-      <productGrid category='men'/>
       <BottomNavigation/>
+      <ProductGrid category='men'/>
     </>
   )
 }
