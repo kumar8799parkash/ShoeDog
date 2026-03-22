@@ -1,4 +1,4 @@
-import React from 'react'
+import React , {useState} from 'react'
 import logo from '../assets/logo.png'
 import searchLogo from '../assets/svgs/search.svg'
 import userProfileLogo from '../assets/svgs/user-profile.svg'
@@ -6,9 +6,16 @@ import bagLogo from '../assets/svgs/bag.svg'
 import './Navbar.css'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
+import LoginButton from './LoginButton.jsx'
+import SignupButton from './SignupButton.jsx'
+import ProfileButton from './ProfileButton.jsx'
 
 
 const Navbar = () => {
+  //const [token , setToken] = useState("");
+  const userToken = localStorage.getItem('jwtToken');
+  
+  
   const navigate = useNavigate();
 
   function handleBagClick() {
@@ -70,8 +77,11 @@ const Navbar = () => {
           </div>
 
 
-          <div className="user-profile-cont h-full p-2.5 mr-2 cursor-pointer"> <img className='h-full invert-100' src={userProfileLogo} onClick={handleProfileClick} alt="" /> </div>
-          <div className="cart-cont h-full p-1.5 cursor-pointer"> <img className='h-full invert-100' src={bagLogo} onClick={handleBagClick} alt="" /> </div>
+          {
+            (userToken) ? (<ProfileButton/>) : (<div className='h-full flex gap-2 items-center'><SignupButton/><LoginButton/></div>)
+          }
+          {/* <div className="user-profile-cont h-full p-2.5 mr-2 cursor-pointer"> <img className='h-full invert-100' src={userProfileLogo} onClick={handleProfileClick} alt="" /> </div> */}
+          <div className="cart-cont h-full  ml-4 cursor-pointer"> <img className='h-full invert-100' src={bagLogo} onClick={handleBagClick} alt="" /> </div>
         </div>
       </div>
     </div>

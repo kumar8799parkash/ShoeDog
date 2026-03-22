@@ -4,6 +4,7 @@ import { connectDB } from './src/config/db.js';
 import { productRouter } from './src/routes/productRouters.js';
 import {categoryRouter} from './src/routes/categoryRouter.js';
 import cors from 'cors'
+import authRouter from './src/routes/authRoutes.js';
 
 
 /* import Category from './src/models/CategoryModel.js';
@@ -23,7 +24,7 @@ app.get('/', (req, res) => {
     res.send('Hello world this is parker')
 })
 
-
+app.use('/auth' , authRouter);
 app.use('/product' , productRouter);
 app.use('/category' , categoryRouter);
 

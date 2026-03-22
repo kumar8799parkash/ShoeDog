@@ -4,6 +4,7 @@ import HeroImage from '../components/HeroImage.jsx'
 import SectionContainer from '../components/SectionContainer.jsx'
 import BottomNavigation from '../components/BottomNavigation.jsx'
 
+
 const home = () => {
   return (
     <>
