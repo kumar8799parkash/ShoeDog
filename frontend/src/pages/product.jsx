@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import configObject from '../config.js';
+import Navbar from '../components/Navbar.jsx';
 
 const product = () => {
 
@@ -29,6 +30,7 @@ const product = () => {
 
     return (
         <>
+            <Navbar/>
             <div className="canvas min-h-screen bg-gray-100 py-10">
 
                 <div className="flex justify-center text-4xl font-bold text-gray-800 mb-8">

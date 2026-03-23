@@ -5,10 +5,16 @@ import { useNavigate } from 'react-router-dom';
 const ProfileButton = () => {
     const navigate = useNavigate();
     function handleProfileClick() {
-        navigate("/profile");
+        const userToken = localStorage.getItem('jwtToken');
+        if(!userToken){
+            navigate("/signup");
+        }
+        else{
+            navigate("/profile");
+        }
     }
     return (
-        <div className="user-profile-cont h-full p-1.5 mr-2 cursor-pointer"> <img className='h-full invert-100' src={userProfileLogo} onClick={handleProfileClick} alt="" /> </div>
+        <div className="user-profile-cont h-full ml-3 mr-2 cursor-pointer"> <img className='h-full invert-100' src={userProfileLogo} onClick={handleProfileClick} alt="" /> </div>
     )
 }
 

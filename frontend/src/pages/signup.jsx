@@ -19,12 +19,12 @@ const signup = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
-
+ 
     try {
       const res = await fetch(`${configObject.BACKEND_URL}/auth/signup`, {
         method: 'POST',
         headers : {
-          'content-Type' : 'application/json'
+          'Content-Type' : 'application/json'
         },
         body: JSON.stringify(formData)    // Equivalent to  JSON.stringify({name : "pk" , email:"pk@gmail.com" , password:"8799"})
       })
@@ -36,14 +36,15 @@ const signup = () => {
         return;
       }
 
-      console.log(data.message);
+      //console.log(data.message);
       setMessageText(data.message);
 
-
-      localStorage.setItem('jwtToken' , data.jwtToken);
-      navigate('/login' , {replace : true});
+      setTimeout(() => {
+        navigate('/login' , {replace : true});
+      }, 2000);
+      
     }catch(err){
-      console.log("Error while fetching");
+      console.log("Error while fetching",err);
     }
 
   }

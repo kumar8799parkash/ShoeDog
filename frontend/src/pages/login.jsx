@@ -34,15 +34,20 @@ const login = () => {
 
       if (!res.ok) {
         alert(data.message);
+        return;
       }
 
 
-      console.log(data);
+      //console.log(data);
       setMessagetext(data.message);
-      localStorage.setItem('jwtToken', data.jwtToken);
-      navigate('/mainPage', { replace: true });
+      localStorage.setItem('jwtToken', data.jwt);
+
+      setTimeout(()=>{
+        navigate('/', { replace: true });
+      } , 2000)
+      
     } catch (err) {
-      console.log("Error while login", err);
+      //console.log("Error while login", err);
       setMessagetext(err);
     }
 

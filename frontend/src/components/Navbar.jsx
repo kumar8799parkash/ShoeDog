@@ -19,7 +19,12 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   function handleBagClick() {
-    navigate("/cart");
+    if(!userToken){
+      navigate("/signup");
+    }
+    else{
+      navigate("/cart");
+    }
   }
 
   function handleProfileClick() {
@@ -27,7 +32,7 @@ const Navbar = () => {
   }
 
   return (
-    <div>
+    <>
       <div className="main-navbar-cont w-full h-12 bg-green-900 flex px-20 justify-between">
 
         <div className="left-nav-cont h-full flex">
@@ -84,7 +89,7 @@ const Navbar = () => {
           <div className="cart-cont h-full  ml-4 cursor-pointer"> <img className='h-full invert-100' src={bagLogo} onClick={handleBagClick} alt="" /> </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
